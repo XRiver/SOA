@@ -6,7 +6,7 @@
         xmlns:nju="http://www.nju.edu.cn/schema"
         elementFormDefault="qualified">
 
-    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Combined/njuSchema.xsd"></xs:import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Combined/njuSchema.xsd" namespace="http://www.nju.edu.cn/schema"></xs:import>
 
     <complexType name="课程结构">
     <sequence>
