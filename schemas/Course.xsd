@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://jw.nju.edu.cn/schema"
+        xmlns:jw="http://jw.nju.edu.cn/schema"
+        elementFormDefault="qualified">
+
+    <include schemaLocation="Teacher.xsd"></include>
+    <element name="课程" type="jw:课程结构"></element>
+
+    <complexType name="课程结构">
+    <sequence>
+        <element name="课程编号" type="jw:课程编号类型"></element>
+        <element name="课程名称" type="string"></element>
+        <element name="学分数">
+            <simpleType>
+                <restriction base="int">
+                    <minInclusive value="1"></minInclusive>
+                    <maxInclusive value="5"></maxInclusive>
+                </restriction>
+            </simpleType>
+        </element>
+        <element name="课时安排" type="string"></element>
+        <element name="教师列表" type="jw:教师列表结构"></element>
+        </sequence>
+    </complexType>
+
+    <complexType name="教师列表结构">
+        <sequence>
+            <element name="教师" type="jw:教师结构" maxOccurs="unbounded" minOccurs="1"></element>
+        </sequence>
+    </complexType>
+
+
+
+    <simpleType name="课程编号类型">
+        <restriction base="string">
+            <length value="6"></length>
+        </restriction>
+    </simpleType>
+</schema>
