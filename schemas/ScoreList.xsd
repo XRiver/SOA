@@ -8,8 +8,6 @@
     <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd"></xs:import>
     <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd"></xs:import>
 
-
-    <element name="课程成绩列表" type="jw:课程成绩列表类型"></element>
     <complexType name="课程成绩列表类型">
         <sequence minOccurs="0" maxOccurs="unbounded">
             <element name="课程成绩" type="jw:课程成绩类型"></element>

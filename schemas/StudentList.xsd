@@ -7,8 +7,6 @@
 	
 	<xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd"></xs:import>
 
-	<element name="学生列表" type="jw:学生列表结构"></element>
-
 	<complexType name="学生列表结构">
 		<sequence>
 			<element name="学生" type="jw:学生结构" maxOccurs="unbounded" minOccurs="0"></element>

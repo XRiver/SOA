@@ -4,7 +4,6 @@
         xmlns:nju="http://www.nju.edu.cn/schema"
         elementFormDefault="qualified">
 
-    <element name="部门" type="nju:部门结构"></element>
 
     <complexType name="部门结构">
     <sequence>

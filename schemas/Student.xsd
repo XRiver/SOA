@@ -8,8 +8,6 @@
     <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd"></xs:import>
     <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/ScoreList.xsd"></xs:import>
 
-    <element name="学生" type="jw:学生结构"></element>
-
     <complexType name="学生结构">
     <sequence>
         <element name="个人信息" type="nju:个人信息结构"></element>
