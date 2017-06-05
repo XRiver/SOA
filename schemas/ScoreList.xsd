@@ -2,10 +2,11 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://jw.nju.edu.cn/schema"
         xmlns:jw="http://jw.nju.edu.cn/schema"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
         elementFormDefault="qualified">
 
-    <import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd" namespace="http://jw.nju.edu.cn/schema"></import>
-    <import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd" namespace="http://jw.nju.edu.cn/schema"></import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd" namespace="http://jw.nju.edu.cn/schema"></xs:import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd" namespace="http://jw.nju.edu.cn/schema"></xs:import>
 
 
     <element name="课程成绩列表" type="jw:课程成绩列表类型"></element>

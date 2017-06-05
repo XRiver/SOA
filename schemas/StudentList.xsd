@@ -2,9 +2,10 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
 		targetNamespace="http://jw.nju.edu.cn/schema"
 		xmlns:jw="http://jw.nju.edu.cn/schema"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		elementFormDefault="qualified">
 	
-	<import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd" namespace="http://jw.nju.edu.cn/schema"></import>
+	<xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd" namespace="http://jw.nju.edu.cn/schema"></xs:import>
 
 	<element name="学生列表" type="jw:学生列表结构"></element>
 

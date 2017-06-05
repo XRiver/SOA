@@ -3,9 +3,10 @@
         targetNamespace="http://jw.nju.edu.cn/schema"
         xmlns:jw="http://jw.nju.edu.cn/schema"
         xmlns:nju="http://www.nju.edu.cn/schema"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
         elementFormDefault="qualified">
-    <import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd" namespace="http://jw.nju.edu.cn/schema"></import>
-    <import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/ScoreList.xsd" namespace="http://jw.nju.edu.cn/schema"></import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd" namespace="http://jw.nju.edu.cn/schema"></xs:import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/ScoreList.xsd" namespace="http://jw.nju.edu.cn/schema"></xs:import>
 
     <element name="学生" type="jw:学生结构"></element>
 

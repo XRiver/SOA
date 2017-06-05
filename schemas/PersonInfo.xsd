@@ -2,10 +2,11 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://www.nju.edu.cn/schema"
         xmlns:nju="http://www.nju.edu.cn/schema"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
         elementFormDefault="qualified">
 
 
-    <import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Department.xsd" namespace="http://www.nju.edu.cn/schema"></import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Department.xsd" namespace="http://www.nju.edu.cn/schema"></xs:import>
 
     <element name="个人信息" type="nju:个人信息结构"></element>
 
