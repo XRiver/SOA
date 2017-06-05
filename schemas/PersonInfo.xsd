@@ -6,7 +6,7 @@
         elementFormDefault="qualified">
 
 
-    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Department.xsd" namespace="http://www.nju.edu.cn/schema"></xs:import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Department.xsd"></xs:import>
 
     <element name="个人信息" type="nju:个人信息结构"></element>
 
