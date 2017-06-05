@@ -4,7 +4,7 @@
 		xmlns:jw="http://jw.nju.edu.cn/schema"
 		elementFormDefault="qualified">
 	
-	<include schemaLocation="Student.xsd"></include>
+	<include schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd"></include>
 
 	<element name="学生列表" type="jw:学生列表结构"></element>
 

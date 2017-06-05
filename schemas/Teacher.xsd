@@ -4,7 +4,7 @@
         xmlns:jw="http://jw.nju.edu.cn/schema"
         xmlns:nju="http://www.nju.edu.cn/schema"
         elementFormDefault="qualified">
-    <import schemaLocation="PersonInfo.xsd" namespace="http://www.nju.edu.cn/schema" />
+    <import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/PersonInfo.xsd" />
     <element name="教师" type="jw:教师结构"></element>
     <complexType name="教师结构">
         <sequence>

@@ -4,8 +4,8 @@
         xmlns:jw="http://jw.nju.edu.cn/schema"
         elementFormDefault="qualified">
 
-    <include schemaLocation="Student.xsd"></include>
-    <include schemaLocation="Course.xsd"></include>
+    <include schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd"></include>
+    <include schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd"></include>
 
 
     <element name="课程成绩列表" type="jw:课程成绩列表类型"></element>
