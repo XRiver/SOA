@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://www.nju.edu.cn/schema"
-        xmlns:nju="http://www.nju.edu.cn/schema"
+        targetNamespace="http://www.nju.edu.cn/schema/person"
+        xmlns:njuperson="http://www.nju.edu.cn/schema/person"
+        xmlns:njudepartment="http://www.nju.edu.cn/schema/department"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         elementFormDefault="qualified">
 
 
-    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Department.xsd"></xs:import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Department.xsd" namespace="http://www.nju.edu.cn/schema/department"></xs:import>
 
     <complexType name="个人信息结构">
     <sequence>
         <element name="姓名" type="string"></element>
-        <element name="性别" type="nju:性别类型"></element>
-        <element name="部门" type="nju:部门结构"></element>
+        <element name="性别" type="njuperson:性别类型"></element>
+        <element name="部门" type="njudepartment:部门结构"></element>
         <element name="生日" type="date"></element>
         <element name="身份证号">
             <simpleType>

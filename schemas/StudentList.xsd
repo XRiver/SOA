@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
-		targetNamespace="http://jw.nju.edu.cn/schema"
-		xmlns:jw="http://jw.nju.edu.cn/schema"
+		targetNamespace="http://jw.nju.edu.cn/schema/studentlist"
+		xmlns:jwstulist="http://jw.nju.edu.cn/schema/studentlist"
+		xmlns:jwstudent="http://jw.nju.edu.cn/schema/student"
 		xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		elementFormDefault="qualified">
 	
-	<xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd"></xs:import>
+	<xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd" namespace="http://jw.nju.edu.cn/schema/student"></xs:import>
 
 	<complexType name="学生列表结构">
 		<sequence>
-			<element name="学生" type="jw:学生结构" maxOccurs="unbounded" minOccurs="0"></element>
+			<element name="学生" type="jwstudent:学生结构" maxOccurs="unbounded" minOccurs="0"></element>
 		</sequence>
 	</complexType>
 

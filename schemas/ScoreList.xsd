@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://jw.nju.edu.cn/schema"
-        xmlns:jw="http://jw.nju.edu.cn/schema"
+        targetNamespace="http://jw.nju.edu.cn/schema/scorelist"
+        xmlns:jwscorelist="http://jw.nju.edu.cn/schema/scorelist"
+        xmlns:jwcourse="http://jw.nju.edu.cn/schema/course"
+        xmlns:jwstudent="http://jw.nju.edu.cn/schema/student"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         elementFormDefault="qualified">
 
-    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd"></xs:import>
-    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd"></xs:import>
-
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd" namespace="http://jw.nju.edu.cn/schema/course"></xs:import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd" namespace="http://jw.nju.edu.cn/schema/student"></xs:import>
     <complexType name="课程成绩列表类型">
         <sequence minOccurs="0" maxOccurs="unbounded">
-            <element name="课程成绩" type="jw:课程成绩类型"></element>
+            <element name="课程成绩" type="jwscorelist:课程成绩类型"></element>
         </sequence>
     </complexType>
 
     <complexType name="课程成绩类型">
         <sequence minOccurs="0" maxOccurs="unbounded">
-            <element name="成绩" type="jw:成绩类型">
+            <element name="成绩" type="jwscorelist:成绩类型">
 
             </element>
         </sequence>
-        <attribute name="课程编号" type="jw:课程编号类型"></attribute>
-        <attribute name="成绩性质" type="jw:成绩性质类型"></attribute>
+        <attribute name="课程编号" type="jwcourse:课程编号类型"></attribute>
+        <attribute name="成绩性质" type="jwscorelist:成绩性质类型"></attribute>
     </complexType>
 
     <complexType name="成绩类型">
         <sequence>
-            <element name="学号" type="jw:学号类型"></element>
-            <element name="得分" type="jw:得分类型"></element>
+            <element name="学号" type="jwstudent:学号类型"></element>
+            <element name="得分" type="jwscorelist:得分类型"></element>
         </sequence>
     </complexType>
 

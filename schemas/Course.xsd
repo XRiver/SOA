@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://jw.nju.edu.cn/schema"
-        xmlns:jw="http://jw.nju.edu.cn/schema"
+        targetNamespace="http://jw.nju.edu.cn/schema/course"
+        xmlns:jwteacher="http://jw.nju.edu.cn/schema/teacher"
+        xmlns:jwcourse="http://jw.nju.edu.cn/schema/course"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         elementFormDefault="qualified">
 
-    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Teacher.xsd"></xs:import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Teacher.xsd" namespace="http://jw.nju.edu.cn/schema/teacher"></xs:import>
 
     <complexType name="课程结构">
     <sequence>
-        <element name="课程编号" type="jw:课程编号类型"></element>
+        <element name="课程编号" type="jwcourse:课程编号类型"></element>
         <element name="课程名称" type="string"></element>
         <element name="学分数">
             <simpleType>
@@ -20,13 +21,13 @@
             </simpleType>
         </element>
         <element name="课时安排" type="string"></element>
-        <element name="教师列表" type="jw:教师列表结构"></element>
+        <element name="教师列表" type="jwcourse:教师列表结构"></element>
         </sequence>
     </complexType>
 
     <complexType name="教师列表结构">
         <sequence>
-            <element name="教师" type="jw:教师结构" maxOccurs="unbounded" minOccurs="1"></element>
+            <element name="教师" type="jwteacher:教师结构" maxOccurs="unbounded" minOccurs="1"></element>
         </sequence>
     </complexType>
 

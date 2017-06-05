@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://jw.nju.edu.cn/schema"
-        xmlns:jw="http://jw.nju.edu.cn/schema"
-        xmlns:nju="http://www.nju.edu.cn/schema"
+        targetNamespace="http://jw.nju.edu.cn/schema/student"
+        xmlns:jwstudent="http://jw.nju.edu.cn/schema/student"
+        xmlns:jwcourse="http://jw.nju.edu.cn/schema/course"
+        xmlns:jwscorelist="http://jw.nju.edu.cn/schema/scorelist"
+        xmlns:njuperson="http://www.nju.edu.cn/schema/person"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         elementFormDefault="qualified">
-    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd"></xs:import>
-    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/ScoreList.xsd"></xs:import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd" namespace="http://jw.nju.edu.cn/schema/course"></xs:import>
+    <xs:import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/ScoreList.xsd" namespace="http://jw.nju.edu.cn/schema/scorelist"></xs:import>
 
     <complexType name="学生结构">
     <sequence>
-        <element name="个人信息" type="nju:个人信息结构"></element>
+        <element name="个人信息" type="njuperson:个人信息结构"></element>
         <element name="入学时间" type="date"></element>
-        <element name="学号" type="jw:学号类型"></element>
-        <element name="成绩列表" type="jw:成绩列表结构"></element>
+        <element name="学号" type="jwstudent:学号类型"></element>
+        <element name="成绩列表" type="jwscorelist:成绩列表结构"></element>
         <element name="绩点">
             <simpleType>
                 <restriction base="double">
@@ -27,15 +29,15 @@
 
     <complexType name="成绩列表结构">
         <sequence minOccurs="0" maxOccurs="unbounded">
-            <element name="单科成绩" type="jw:单科成绩结构"/>
+            <element name="单科成绩" type="jwstudent:单科成绩结构"/>
         </sequence>
     </complexType>
     <complexType name="单科成绩结构">
         <sequence>
-            <element name="课程" type="jw:课程结构"/>
-            <element name="平时成绩" type="jw:得分类型"/>
-            <element name="期末成绩" type="jw:得分类型"/>
-            <element name="总评成绩" type="jw:得分类型"/>
+            <element name="课程" type="jwcourse:课程结构"/>
+            <element name="平时成绩" type="jwscorelist:得分类型"/>
+            <element name="期末成绩" type="jwscorelist:得分类型"/>
+            <element name="总评成绩" type="jwscorelist:得分类型"/>
         </sequence>
 
     </complexType>
