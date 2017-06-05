@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.nju.edu.cn/schema"
+        xmlns:nju="http://www.nju.edu.cn/schema"
+        elementFormDefault="qualified">
+
+
+    <complexType name="部门结构">
+    <sequence>
+        <element name="部门编号" type="string"></element>
+        <element name="部门名称" type="string"></element>
+        <element name="部门类型" type="nju:部门类型"></element>
+        </sequence>
+    </complexType>
+
+    <simpleType name="部门类型">
+        <restriction base="string">
+            <enumeration value="院系"></enumeration>
+            <enumeration value="行政部门"></enumeration>
+            <enumeration value="直属部门"></enumeration>
+        </restriction>
+    </simpleType>
+
+
+</schema>
