@@ -4,7 +4,7 @@
         xmlns:jw="http://jw.nju.edu.cn/schema"
         elementFormDefault="qualified">
 
-    <include schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Teacher.xsd" namespace="http://jw.nju.edu.cn/schema"></include>
+    <import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Teacher.xsd" namespace="http://jw.nju.edu.cn/schema"></import>
     <element name="课程" type="jw:课程结构"></element>
 
     <complexType name="课程结构">

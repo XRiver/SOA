@@ -4,8 +4,8 @@
         xmlns:jw="http://jw.nju.edu.cn/schema"
         elementFormDefault="qualified">
 
-    <include schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd" namespace="http://jw.nju.edu.cn/schema"></include>
-    <include schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd" namespace="http://jw.nju.edu.cn/schema"></include>
+    <import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Student.xsd" namespace="http://jw.nju.edu.cn/schema"></import>
+    <import schemaLocation="https://github.com/XRiver/SOA/raw/master/schemas/Course.xsd" namespace="http://jw.nju.edu.cn/schema"></import>
 
 
     <element name="课程成绩列表" type="jw:课程成绩列表类型"></element>
