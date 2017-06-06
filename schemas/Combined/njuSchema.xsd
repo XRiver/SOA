@@ -4,7 +4,8 @@
         xmlns:nju="http://www.nju.edu.cn/schema"
         elementFormDefault="qualified">
 
-
+    <element name="部门" type="nju:部门结构"></element>
+    <element name="个人信息" type="nju:个人信息结构"></element>
     <complexType name="部门结构">
     <sequence>
         <element name="部门编号" type="string"></element>
